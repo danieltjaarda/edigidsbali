@@ -11,8 +11,8 @@ const usps = [
     text: "Van hotel, villa of homestay in Zuid-Bali en Ubud. Op de tijd die jullie kiezen.",
   },
   {
-    title: "Vaste prijs per auto",
-    text: `Eén prijs voor de hele dag, voor maximaal ${MAX_GUESTS} personen. Geen verrassingen achteraf.`,
+    title: "Eén prijs per auto",
+    text: `Eén prijs voor de hele dag, voor maximaal ${MAX_GUESTS} personen. Je krijgt hem vooraf via WhatsApp, geen verrassingen achteraf.`,
   },
   {
     title: "Flexibel programma",

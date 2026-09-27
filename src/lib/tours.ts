@@ -75,6 +75,12 @@ export function formatPrice(tour: Tour) {
   return tour.priceUnit === "auto" ? `${amount} per auto` : `${amount} p.p.`;
 }
 
+/** Compacte variant voor op de kaarten. */
+export function formatPriceShort(tour: Tour) {
+  const amount = `€ ${tour.priceFrom}`;
+  return tour.priceUnit === "auto" ? `${amount} / auto` : `${amount} p.p.`;
+}
+
 export const TOURS: Tour[] = [
   {
     slug: "ubud-highlights",

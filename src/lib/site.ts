@@ -11,9 +11,9 @@ export const SITE_NAME = "Edigidsbali";
 export const GUIDE_NAME = "Edi";
 export const TAGLINE = "Jouw persoonlijke gids en chauffeur op Bali";
 
-/** TODO: het echte Indonesische mobiele nummer van Edi (WhatsApp). */
-export const PHONE_DISPLAY = "+62 812 0000 0000";
-export const PHONE_E164 = "+6281200000000";
+/** Mobiele nummer van Edi (WhatsApp). */
+export const PHONE_DISPLAY = "+62 813 3809 7022";
+export const PHONE_E164 = "+6281338097022";
 export const PHONE_TEL = `tel:${PHONE_E164}`;
 export const WHATSAPP_NUMBER = PHONE_E164.replace("+", "");
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;

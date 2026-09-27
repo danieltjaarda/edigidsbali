@@ -11,11 +11,10 @@ import JsonLd from "@/components/JsonLd";
 import TourCard from "@/components/TourCard";
 import { creditFor } from "@/lib/photo-credits";
 import { breadcrumbSchema, pageMetadata, tourSchema } from "@/lib/seo";
-import { GUIDE_NAME, MAX_GUESTS, whatsappLink } from "@/lib/site";
+import { GUIDE_NAME, MAX_GUESTS } from "@/lib/site";
 import {
   TOURS,
   categoryLabel,
-  formatPrice,
   inbegrepenVan,
   nietInbegrepenVan,
   relatedTours,
@@ -40,8 +39,8 @@ export async function generateMetadata({
   if (!tour) return {};
   const credit = creditFor(tour.image);
   return pageMetadata({
-    title: `${tour.title} | Privétour vanaf ${formatPrice(tour)}`,
-    description: `${tour.short}. ${tour.duration}, ${tour.region}. Privétour met gids en chauffeur ${GUIDE_NAME}, ophalen bij je verblijf. Bekijk het programma, de richtprijs en de tips.`,
+    title: `${tour.title} | Privétour met gids`,
+    description: `${tour.short}. ${tour.duration}, ${tour.region}. Privétour met gids en chauffeur ${GUIDE_NAME}, ophalen bij je verblijf. Bekijk het programma en de tips.`,
     path: `/tours/${tour.slug}`,
     keywords: [tour.title, `${tour.region} tour`, "Bali privétour", ...tour.highlights.slice(0, 3)],
     image: credit
@@ -69,9 +68,7 @@ export default async function TourPage({
 
   const path = `/tours/${tour.slug}`;
   const related = relatedTours(tour, 3);
-  const whatsapp = whatsappLink(
-    `Hoi ${GUIDE_NAME}, ik wil graag de tour "${tour.title}" boeken.\nDatum: …\nAantal personen: …\nWaar we verblijven: …`,
-  );
+  const whatsappMessage = `Hoi ${GUIDE_NAME}, ik wil graag de tour "${tour.title}" boeken.\nDatum: …\nAantal personen: …\nWaar we verblijven: …`;
 
   return (
     <>
@@ -222,16 +219,14 @@ export default async function TourPage({
 
               <aside className="lg:col-span-1">
                 <div className="rounded-3xl bg-jungle-deep p-6 text-white lg:sticky lg:top-28 sm:p-7">
-                  <p className="text-sm text-white/70">Richtprijs</p>
-                  <p className="mt-1 text-3xl font-semibold tracking-tight">
-                    vanaf {formatPrice(tour)}
+                  <p className="text-sm text-white/70">Prijs op aanvraag</p>
+                  <p className="mt-1 text-2xl font-semibold tracking-tight">
+                    Vraag {GUIDE_NAME} naar de mogelijkheden
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-white/70">
-                    {tour.priceNote
-                      ? tour.priceNote.charAt(0).toUpperCase() + tour.priceNote.slice(1)
-                      : tour.priceUnit === "auto"
-                        ? `Voor de hele auto, tot ${MAX_GUESTS} personen. Exclusief entreegelden en maaltijden.`
-                        : "Per persoon. Exclusief entreegelden en maaltijden, tenzij anders vermeld."}
+                    Eén prijs voor de hele auto (tot {MAX_GUESTS} personen),
+                    afgestemd op jullie programma. Entreegelden en maaltijden
+                    betaal je ter plekke.
                   </p>
 
                   <dl className="mt-6 space-y-3 border-t border-white/10 pt-6 text-sm">
@@ -253,15 +248,15 @@ export default async function TourPage({
                     </div>
                   </dl>
 
-                  <a
-                    href={whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    data-contact
+                    data-message={whatsappMessage}
                     className="btn-squeeze mt-6 inline-flex h-12 w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-6 text-base font-semibold text-white hover:brightness-105"
                   >
                     <WhatsAppIcon size={18} />
-                    Boek via WhatsApp
-                  </a>
+                    Contact via WhatsApp
+                  </button>
                   <Link
                     href={`/contact?tour=${encodeURIComponent(tour.title)}`}
                     className="btn-squeeze mt-3 inline-flex h-12 w-full items-center justify-center rounded-full border border-white/25 px-6 text-base font-semibold text-white hover:bg-white/10"

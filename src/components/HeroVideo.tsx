@@ -98,22 +98,23 @@ export default function HeroVideo({
       }
     };
 
+    // Op mobiel: kort na hydratie starten, met een vangnet van 1,5 s. Wachten op
+    // het load-event (zoals eerst) liet de video op telefoons soms nooit starten.
     const mobile = window.matchMedia(MOBILE).matches;
-
-    // En móviles: deja que primero lleguen la página, la hidratación y los pósteres.
-    // Sin red de seguridad de 3 s: coincidía con el resto de la carga.
     if (mobile) {
       if (document.readyState === "complete") {
         afterIdle();
       } else {
         window.addEventListener("load", afterIdle, { once: true });
       }
+      const safety = window.setTimeout(start, 1500);
       return () => {
         window.removeEventListener("load", afterIdle);
         if (idleId && typeof window.cancelIdleCallback === "function") {
           window.cancelIdleCallback(idleId);
         }
         window.clearTimeout(fallbackId);
+        window.clearTimeout(safety);
       };
     }
 
@@ -122,7 +123,7 @@ export default function HeroVideo({
       return;
     }
     window.addEventListener("load", start, { once: true });
-    const timer = window.setTimeout(start, 3000);
+    const timer = window.setTimeout(start, 1500);
     return () => {
       window.removeEventListener("load", start);
       window.clearTimeout(timer);
@@ -157,7 +158,7 @@ export default function HeroVideo({
           loop
           playsInline
           autoPlay
-          preload="metadata"
+          preload="auto"
           aria-hidden
           onPlaying={() => setPlaying(true)}
           className={className}

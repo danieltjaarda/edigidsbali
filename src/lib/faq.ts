@@ -8,7 +8,7 @@ export const FAQ: FaqItem[] = [
   },
   {
     question: "Wat kost een dagtour?",
-    answer: `De meeste tours hebben een richtprijs per auto, voor maximaal ${MAX_GUESTS} personen, ongeacht hoeveel mensen er meegaan. Bij tours met een boot, berggids of activiteit staat de prijs per persoon. Entreegelden zijn nooit inbegrepen; ${GUIDE_NAME} noemt die bedragen vooraf.`,
+    answer: `Dat hangt af van je programma. Stuur ${GUIDE_NAME} een WhatsApp met de tour, de datum en het aantal personen en je krijgt direct een prijs. Voor de meeste dagtours geldt één prijs voor de hele auto (tot ${MAX_GUESTS} personen); bij tours met een boot, berggids of activiteit is het per persoon. Entreegelden zijn niet inbegrepen.`,
   },
   {
     question: "Zijn entreegelden en maaltijden inbegrepen?",

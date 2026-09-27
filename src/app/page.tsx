@@ -36,8 +36,8 @@ export default function Home() {
                 <p className="mt-4 text-pretty text-muted">
                   Van de zonsopgang op de Mount Batur tot snorkelen met manta&apos;s:
                   {" "}{TOURS.length} dagtours, elk aan te passen aan jullie
-                  tempo. Klik op een tour voor het programma, de richtprijs en
-                  wat je moet meenemen.
+                  tempo. Klik op een tour voor het programma en wat je moet
+                  meenemen.
                 </p>
               </div>
               <Link

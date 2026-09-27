@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { categoryLabel, formatPrice, type Tour } from "@/lib/tours";
+import { WhatsAppIcon } from "@/components/Header";
+import { GUIDE_NAME } from "@/lib/site";
+import { categoryLabel, type Tour } from "@/lib/tours";
 
 export function ArrowButton() {
   return (
@@ -65,13 +67,24 @@ export default function TourCard({
         </h3>
         <p className="mt-1.5 line-clamp-2 text-sm text-white/75">{tour.short}</p>
         <div className="mt-4 flex items-center justify-between gap-3">
-          <p className="text-sm text-white/80">
-            vanaf{" "}
-            <span className="text-base font-semibold text-white">
-              {formatPrice(tour)}
+          <p className="text-sm text-white/80">Prijs op aanvraag</p>
+          <div className="flex items-center gap-2">
+            {/* Opent de WhatsApp-pop-up (ContactModal) in plaats van de tourpagina */}
+            <span
+              role="button"
+              tabIndex={0}
+              data-contact
+              data-message={`Hoi ${GUIDE_NAME}, ik heb interesse in de tour "${tour.title}". Wat zijn de mogelijkheden en de prijs?`}
+              aria-label={`Contact opnemen over ${tour.title}`}
+              className="liquid-glass-btn inline-flex h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold text-white"
+            >
+              <span className="text-[#25D366]">
+                <WhatsAppIcon size={16} />
+              </span>
+              Contact
             </span>
-          </p>
-          <ArrowButton />
+            <ArrowButton />
+          </div>
         </div>
       </div>
     </Link>

@@ -173,17 +173,6 @@ export function tourSchema(tour: Tour): JsonLdNode {
       })),
     },
     provider: { "@id": ORGANIZATION_ID },
-    offers: {
-      "@type": "Offer",
-      price: tour.priceFrom,
-      priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-      url: `${SITE_URL}${path}`,
-      description:
-        tour.priceUnit === "auto"
-          ? "Richtprijs per auto (privétour), exclusief entreegelden"
-          : "Richtprijs per persoon, exclusief entreegelden",
-    },
   };
 }
 

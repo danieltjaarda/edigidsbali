@@ -251,6 +251,13 @@ body {
   }
 }
 
+/* Telefoons: geen zoom-animatie op de full-screen video (GPU-belasting). */
+@media (max-width: 767px) {
+  .slow-zoom {
+    animation: none;
+  }
+}
+
 /* Telefoons: geen backdrop-filter. Die blur dwingt de GPU elk frame het
    scherm opnieuw te tekenen, vooral boven een afspelende video. */
 @media (max-width: 767px) {

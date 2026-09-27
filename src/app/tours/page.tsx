@@ -12,7 +12,7 @@ import { TOURS } from "@/lib/tours";
 
 export const metadata: Metadata = pageMetadata({
   title: `Alle tours op Bali | ${TOURS.length} privé dagtours met gids`,
-  description: `Overzicht van alle ${TOURS.length} privétours van Edigidsbali: tempels, rijstvelden, watervallen, Nusa Penida, snorkelen en familietours. Met programma, richtprijs en tips per tour.`,
+  description: `Overzicht van alle ${TOURS.length} privétours van Edigidsbali: tempels, rijstvelden, watervallen, Nusa Penida, snorkelen en familietours. Met programma en tips per tour.`,
   path: "/tours",
   keywords: [
     "Bali tours",
@@ -39,8 +39,8 @@ export default function ToursPage() {
             <p className="mt-4 max-w-xl text-pretty text-muted">
               {TOURS.length} dagtours met {GUIDE_NAME} als gids en chauffeur.
               Filter op wat jij leuk vindt, of combineer twee tours tot een
-              eigen dag. Prijzen zijn richtprijzen per auto of per persoon,
-              exclusief entreegelden.
+              eigen dag. Vraag {GUIDE_NAME} via WhatsApp naar de prijs voor
+              jullie programma.
             </p>
           </div>
         </section>
