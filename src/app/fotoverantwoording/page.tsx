@@ -28,7 +28,7 @@ export default function FotoverantwoordingPage() {
               Foto<span className="accent-serif text-accent">verantwoording</span>
             </h1>
             <p className="mt-4 max-w-2xl text-pretty text-muted">
-              De video&apos;s op deze site zijn van {GUIDE_NAME} zelf. De foto&apos;s van
+              De video&apos;s en de foto bij &apos;Over {GUIDE_NAME}&apos; zijn van {GUIDE_NAME} zelf. De foto&apos;s van
               de tours zijn gemaakt door reizigers en fotografen die hun werk
               via Wikimedia Commons hebben gedeeld onder een Creative
               Commons-licentie. Hieronder staat per foto wie hem maakte en onder

@@ -23,8 +23,8 @@ export default function OverEdi() {
           <div className="relative pb-10 pr-6 sm:pr-10">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
-                src="/images/hero-poster.jpg"
-                alt={`Uitzicht vanuit de lucht op een dorp aan de kust van Bali, met de witte auto van ${GUIDE_NAME} op de weg`}
+                src="/images/over-edi.jpg"
+                alt={`Gast van ${GUIDE_NAME} in een roze jurk op de Bali Swing, hoog boven de jungle en de rivier bij Ubud`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
