@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Edigidsbali beeldmerk">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c85e"/><stop offset="1" stop-color="#e4762d"/></linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0f2b22"/>
+  <circle cx="32" cy="27" r="13" fill="url(#sun)"/>
+  <path d="M7 55V37h3v-6h3v-6h3v-5h3v-4h6v39H7z" fill="#ffffff"/>
+  <path d="M57 55V37h-3v-6h-3v-6h-3v-5h-3v-4h-6v39h18z" fill="#ffffff"/>
+  <path d="M6 59c5-4 11-4 16 0s11 4 16 0 11-4 16 0" stroke="#2fb3ae" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
