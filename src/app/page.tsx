@@ -25,6 +25,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Usps />
+        <IntroVideo />
 
         <section id="tours" className="scroll-mt-24 py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -57,7 +58,6 @@ export default function Home() {
 
         <RijstveldenBand />
         <HoeWerktHet />
-        <IntroVideo />
         <OverEdi />
         <PraktischeTips />
         <Faq
