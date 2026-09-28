@@ -56,12 +56,13 @@ export default function IntroVideo() {
               aria-label={`Speel de introductievideo van ${GUIDE_NAME} af`}
               className="group absolute inset-0 h-full w-full cursor-pointer"
             >
+              {/* Iets ingezoomd en naar boven uitgesneden: zo valt de ingebrande ondertitel uit het YouTube-stilbeeld weg. */}
               <Image
                 src="/images/intro-video-poster.jpg"
                 alt=""
                 fill
                 sizes="(max-width: 1152px) 100vw, 1152px"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                className="scale-[1.12] object-cover object-[50%_8%] transition-transform duration-700 ease-out group-hover:scale-[1.16]"
               />
               <span
                 aria-hidden
