@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HoeWerktHet from "@/components/HoeWerktHet";
+import IntroVideo from "@/components/IntroVideo";
 import JsonLd from "@/components/JsonLd";
 import OverEdi from "@/components/OverEdi";
 import PraktischeTips from "@/components/PraktischeTips";
@@ -56,6 +57,7 @@ export default function Home() {
 
         <RijstveldenBand />
         <HoeWerktHet />
+        <IntroVideo />
         <OverEdi />
         <PraktischeTips />
         <Faq

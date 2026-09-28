@@ -26,6 +26,7 @@ const columns = [
     title: "Informatie",
     links: [
       { label: "Hoe werkt het", href: "/#hoe-werkt-het" },
+      { label: "Introductievideo", href: "/#introductie" },
       { label: `Over ${GUIDE_NAME}`, href: "/#over-edi" },
       { label: "Praktische tips", href: "/#tips" },
       { label: "Veelgestelde vragen", href: "/#faq" },
