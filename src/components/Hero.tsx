@@ -2,11 +2,11 @@ import Link from "next/link";
 
 import { WhatsAppIcon } from "@/components/Header";
 import HeroVideo from "@/components/HeroVideo";
-import { GUIDE_NAME, MAX_GUESTS, WHATSAPP_DEFAULT } from "@/lib/site";
+import { CTA_LABEL, CTA_MESSAGE, GUIDE_NAME, MAX_GUESTS } from "@/lib/site";
 import { TOURS } from "@/lib/tours";
 
 const facts = [
-  `${TOURS.length} tours om uit te kiezen`,
+  `${TOURS.length} tours als inspiratie, alles aanpasbaar`,
   "Privé: alleen jullie in de auto",
   "Ophalen bij je verblijf",
   `Tot ${MAX_GUESTS} personen per auto`,
@@ -39,7 +39,7 @@ export default function Hero() {
 
       <div className="relative mx-auto w-full max-w-6xl px-4 pb-14 pt-40 sm:px-6 sm:pb-20">
         <p className="text-shadow text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-          Privé dagtours op Bali
+          100% Nederlandssprekend
         </p>
         <h1 className="text-shadow mt-4 max-w-2xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl">
           Ontdek het échte Bali, met{" "}
@@ -47,29 +47,27 @@ export default function Hero() {
           het stuur.
         </h1>
         <p className="text-shadow mt-5 max-w-xl text-pretty text-base text-white/85 sm:text-lg">
-          Tempels, rijstvelden, watervallen en eilanden. Jij kiest wat je wilt
-          zien, {GUIDE_NAME} regelt de route, de tickets en de beste plekken
-          voor de lunch. Ophalen bij je verblijf, vaste prijs per auto.
+          Tempels, rijstvelden, watervallen en eilanden: jij vertelt wat je
+          wilt zien, {GUIDE_NAME} maakt er in het Nederlands een dagprogramma
+          van. Met ophalen bij je verblijf en één prijs per auto.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            data-contact
+            data-message={CTA_MESSAGE}
+            className="btn-squeeze inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-accent px-8 text-base font-semibold text-white hover:brightness-110"
+          >
+            <WhatsAppIcon size={18} />
+            {CTA_LABEL}
+          </button>
           <Link
             href="#tours"
-            className="btn-squeeze inline-flex h-12 items-center justify-center rounded-full bg-accent px-8 text-base font-semibold text-white hover:brightness-110"
+            className="liquid-glass-btn btn-squeeze inline-flex h-12 items-center justify-center rounded-full px-7 text-base font-semibold text-white"
           >
-            Bekijk alle tours
+            Bekijk de tours voor inspiratie
           </Link>
-          <a
-            href={WHATSAPP_DEFAULT}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="liquid-glass-btn btn-squeeze inline-flex h-12 items-center justify-center gap-2.5 rounded-full px-7 text-base font-semibold text-white"
-          >
-            <span className="text-[#25D366]">
-              <WhatsAppIcon size={18} />
-            </span>
-            WhatsApp {GUIDE_NAME}
-          </a>
         </div>
 
         <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">

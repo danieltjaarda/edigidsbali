@@ -52,13 +52,7 @@ export default function ToursPage() {
         </section>
 
         <CtaBand
-          title={
-            <>
-              Iets anders in{" "}
-              <span className="accent-serif text-accent">gedachten</span>?
-            </>
-          }
-          text={`Elke tour is een voorbeeld. Vertel ${GUIDE_NAME} wat je wilt zien en hij maakt er een dag van.`}
+          text={`Elke tour hier is een voorbeeld. Vertel ${GUIDE_NAME} wat je wilt zien en hij maakt er in het Nederlands een programma van.`}
         />
       </main>
       <Footer />

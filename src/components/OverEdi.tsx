@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { GUIDE_NAME, MAX_GUESTS, WHATSAPP_DEFAULT } from "@/lib/site";
+import { CTA_LABEL, CTA_MESSAGE, GUIDE_NAME, MAX_GUESTS } from "@/lib/site";
 
 /**
  * TODO: laat Edi deze tekst nalezen en aanpassen. Het is een voorzet op basis
@@ -11,7 +11,7 @@ import { GUIDE_NAME, MAX_GUESTS, WHATSAPP_DEFAULT } from "@/lib/site";
 const facts = [
   "Geboren en getogen op Bali",
   "Eigen auto met airco",
-  "Spreekt Engels en Indonesisch",
+  "100% Nederlandssprekend",
   `Maximaal ${MAX_GUESTS} personen`,
 ];
 
@@ -57,7 +57,8 @@ export default function OverEdi() {
               staat.
             </p>
             <p className="mt-4 text-pretty leading-relaxed text-muted">
-              Geen strak schema, wel een plan. Onderweg vertelt hij over de
+              Alles in het Nederlands: van het eerste WhatsAppje tot de uitleg
+              bij een tempel. Geen strak schema, wel een plan. Onderweg vertelt hij over de
               ceremonies, de offers en het dagelijks leven, en hij past de dag
               aan als jullie liever langer op een strand blijven hangen. Zo
               voelt een tour minder als een excursie en meer als een dag uit
@@ -78,14 +79,14 @@ export default function OverEdi() {
             </ul>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href={WHATSAPP_DEFAULT}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                data-contact
+                data-message={CTA_MESSAGE}
                 className="btn-squeeze inline-flex h-12 items-center justify-center rounded-full bg-accent px-8 text-base font-semibold text-white hover:brightness-110"
               >
-                Stuur {GUIDE_NAME} een berichtje
-              </a>
+                {CTA_LABEL}
+              </button>
               <Link
                 href="/tours"
                 className="btn-squeeze inline-flex h-12 items-center justify-center rounded-full border border-jungle/20 px-8 text-base font-semibold text-foreground hover:bg-jungle/5"

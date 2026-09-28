@@ -3,6 +3,10 @@ import { GUIDE_NAME, MAX_GUESTS, PICKUP_AREAS } from "@/lib/site";
 
 export const FAQ: FaqItem[] = [
   {
+    question: `Spreekt ${GUIDE_NAME} Nederlands?`,
+    answer: `Ja, ${GUIDE_NAME} is 100% Nederlandssprekend. Van het eerste WhatsAppje tot de uitleg bij een tempel: alles gaat gewoon in het Nederlands.`,
+  },
+  {
     question: "Hoe boek ik een tour?",
     answer: `Stuur ${GUIDE_NAME} een WhatsApp of vul het contactformulier in met de datum, je verblijfplaats, het aantal personen en de tour (of wensen) die je in gedachten hebt. Je krijgt meestal binnen een dag een bevestiging met de ophaaltijd en de prijs.`,
   },

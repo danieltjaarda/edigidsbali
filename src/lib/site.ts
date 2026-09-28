@@ -49,6 +49,10 @@ export function whatsappLink(message: string) {
   return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
 }
 
+/** Centrale call-to-action van de site. */
+export const CTA_LABEL = `Stel nu jouw programma met ${GUIDE_NAME} samen`;
+export const CTA_MESSAGE = `Hoi ${GUIDE_NAME}, ik wil graag samen met jou een programma op Bali samenstellen.\nReisdatum: …\nAantal personen: …\nWaar we verblijven: …\nWat we graag willen zien: …`;
+
 export const WHATSAPP_DEFAULT = whatsappLink(
   `Hoi ${GUIDE_NAME}, ik heb je site Edigidsbali bekeken en wil graag een tour op Bali boeken. Kun je me meer vertellen?`,
 );

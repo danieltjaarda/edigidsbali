@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { WhatsAppIcon } from "@/components/Header";
-import { EMAIL, GUIDE_NAME, WHATSAPP_DEFAULT } from "@/lib/site";
+import { CTA_LABEL, CTA_MESSAGE, EMAIL, GUIDE_NAME } from "@/lib/site";
 
 type Props = {
   title?: React.ReactNode;
@@ -11,10 +11,11 @@ type Props = {
 export default function CtaBand({
   title = (
     <>
-      Klaar voor <span className="accent-serif text-accent">Bali</span>?
+      Stel nu jouw programma met{" "}
+      <span className="accent-serif text-accent">{GUIDE_NAME}</span> samen
     </>
   ),
-  text = `Stuur ${GUIDE_NAME} een berichtje met je reisdatum en wat je graag wilt zien. Je krijgt snel een voorstel, zonder verplichtingen.`,
+  text = `Vertel in het Nederlands wat je wilt zien en wanneer je er bent. ${GUIDE_NAME} maakt er een dagprogramma van, zonder verplichtingen.`,
 }: Props) {
   return (
     <section className="pb-16 pt-4 sm:pb-20">
@@ -40,15 +41,15 @@ export default function CtaBand({
               {text}
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href={WHATSAPP_DEFAULT}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                data-contact
+                data-message={CTA_MESSAGE}
                 className="btn-squeeze inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-8 text-base font-semibold text-white hover:brightness-105"
               >
                 <WhatsAppIcon size={18} />
-                WhatsApp {GUIDE_NAME}
-              </a>
+                {CTA_LABEL}
+              </button>
               <a
                 href={`mailto:${EMAIL}`}
                 className="liquid-glass-btn btn-squeeze inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-semibold text-white"

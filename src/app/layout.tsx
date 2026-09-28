@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 
 const TITLE = `${SITE_NAME} | Privé dagtours op Bali met gids en chauffeur ${GUIDE_NAME}`;
 const DESCRIPTION =
-  "Ontdek Bali met Edi als persoonlijke gids en chauffeur: tempels, rijstvelden, watervallen, Nusa Penida en meer. Ruim 30 privétours, ophalen bij je verblijf en een vaste prijs per auto.";
+  "Stel je eigen Bali-programma samen met Edi, 100% Nederlandssprekende gids en chauffeur: tempels, rijstvelden, watervallen, Nusa Penida en meer. Ophalen bij je verblijf, één prijs per auto.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

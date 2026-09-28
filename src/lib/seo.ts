@@ -99,7 +99,7 @@ export function organizationSchema(): JsonLdNode {
       { "@type": "AdministrativeArea", name: "Bali" },
       ...PICKUP_AREAS.map((name) => ({ "@type": "Place", name })),
     ],
-    knowsLanguage: ["en", "id"],
+    knowsLanguage: ["nl", "en", "id"],
     priceRange: "€€",
     currenciesAccepted: "IDR, EUR",
     ...(SOCIAL_PROFILES.length ? { sameAs: SOCIAL_PROFILES } : {}),
